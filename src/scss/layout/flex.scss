@@ -5,18 +5,10 @@
   flex-wrap: wrap;
   gap: var(--gap);
 
-  @include breakpoint(xsmall) {
+  @include breakpoint(medium) {
+    flex-wrap: nowrap;
     &__item {
-      flex: 0 1
-        calc(
-          (100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns))
-        );
-    }
-  }
-
-  @include breakpoint(small) {
-    &__item {
-      --columns: 4;
+      --columns: 2;
       flex: 0 1
         calc(
           (100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns))

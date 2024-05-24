@@ -4,17 +4,22 @@
 .input-group {
   margin-bottom: rem(24);
   position: relative;
+  width: 100%;
+}
+
+label,
+legend {
+  font-weight: normal;
+  font-size: var(--fs-reg);
+  color: var(--clr-dark-grey);
+  line-height: 150%;
+  letter-spacing: 0;
 }
 
 .input-group__label,
 legend {
   display: block;
   margin-bottom: rem(8);
-  font-weight: normal;
-  font-size: var(--fs-reg);
-  color: var(--clr-dark-grey);
-  line-height: 150%;
-  letter-spacing: 0;
 
   span {
     color: var(--clr-green);
@@ -62,9 +67,6 @@ textarea {
 }
 
 .radio__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
   margin-bottom: rem(24);
 
   &-item {
@@ -72,11 +74,6 @@ textarea {
   }
 
   &-label {
-    font-weight: normal;
-    font-size: var(--fs-reg);
-    color: var(--clr-dark-grey);
-    line-height: 150%;
-    letter-spacing: 0;
     position: relative;
     padding-left: rem(60);
     display: flex;
@@ -119,16 +116,31 @@ textarea {
       border-color: var(--clr-green);
 
       .checkmark {
-        border-color: var(--clr-green);
-      }
-
-      .checkmark::after {
-        display: block;
+        border: none;
+        background-image: url(../../assets/images/icon-radio-selected.svg);
       }
     }
   }
+}
 
-  @include breakpoint(medium) {
-    flex-direction: row;
+.consent__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(40);
+
+  label,
+  input {
+    cursor: pointer;
+  }
+
+  input {
+    width: rem(18);
+    height: rem(18);
+    margin-right: rem(16);
+
+    &:checked {
+      appearance: none;
+      background-image: url(../../assets/images/icon-checkbox-check.svg);
+    }
   }
 }

@@ -10,6 +10,7 @@ interface InputProps {
   disabled?: boolean;
   required?: boolean;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 }
 
 const Input: FC<InputProps> = ({
@@ -22,9 +23,10 @@ const Input: FC<InputProps> = ({
   disabled,
   required,
   onChange,
+  className,
 }) => {
   return (
-    <div className='input-group'>
+    <div className={className ? `${className} input-group` : 'input-group'}>
       <label htmlFor={label} className='input-group__label'>
         {label}
         {required && <span>*</span>}

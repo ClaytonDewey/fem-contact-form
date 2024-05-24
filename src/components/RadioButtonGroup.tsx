@@ -34,7 +34,7 @@ const RadioButtonGroup = ({
         {label}
         {required && <span>*</span>}
       </legend>
-      <div className='radio__wrapper'>{renderOptions()}</div>
+      <div className='radio__wrapper flex'>{renderOptions()}</div>
     </fieldset>
   );
 };

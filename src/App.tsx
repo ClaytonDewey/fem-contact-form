@@ -52,23 +52,26 @@ const App: React.FC = () => {
     <main className='container'>
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
-        <Input
-          type='text'
-          label='First Name'
-          name='first-name'
-          required
-          errorMsg='This field is required'
-          {...firstNameInput}
-        />
-
-        <Input
-          type='text'
-          label='Last Name'
-          name='last-name'
-          required
-          errorMsg='This field is required'
-          {...lastNameInput}
-        />
+        <div className='flex'>
+          <Input
+            type='text'
+            label='First Name'
+            name='first-name'
+            required
+            errorMsg='This field is required'
+            className='flex__item'
+            {...firstNameInput}
+          />
+          <Input
+            type='text'
+            label='Last Name'
+            name='last-name'
+            required
+            errorMsg='This field is required'
+            className='flex__item'
+            {...lastNameInput}
+          />
+        </div>
 
         <Input
           type='email'
@@ -88,7 +91,7 @@ const App: React.FC = () => {
 
         <TextArea label={'Message'} required />
 
-        <div className='input__wrapper'>
+        <div className='consent__wrapper'>
           <input type='checkbox' id='consent' />
           <label htmlFor='consent'>
             I hereby consent to being contacted by the team *
