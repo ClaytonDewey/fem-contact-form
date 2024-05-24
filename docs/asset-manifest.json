@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fem-contact-form/static/css/main.da0f24ec.css",
+    "main.js": "/fem-contact-form/static/js/main.14ab9cab.js",
+    "index.html": "/fem-contact-form/index.html",
+    "main.da0f24ec.css.map": "/fem-contact-form/static/css/main.da0f24ec.css.map",
+    "main.14ab9cab.js.map": "/fem-contact-form/static/js/main.14ab9cab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da0f24ec.css",
+    "static/js/main.14ab9cab.js"
+  ]
+}
