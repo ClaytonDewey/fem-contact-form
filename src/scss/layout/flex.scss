@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  @include breakpoint(xsmall) {
+    &__item {
+      flex: 0 1
+        calc(
+          (100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns))
+        );
+    }
+  }
+
+  @include breakpoint(small) {
+    &__item {
+      --columns: 4;
+      flex: 0 1
+        calc(
+          (100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns))
+        );
+    }
+  }
+}

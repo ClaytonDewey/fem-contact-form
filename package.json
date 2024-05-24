@@ -1,6 +1,7 @@
 {
   "name": "fem-contact-form",
   "version": "0.1.0",
+  "homepage": "https://claytondewey.github.io/fem-contact-form",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.77.2"
   }
 }
