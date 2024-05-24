@@ -1,17 +1,44 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import { Button, Input, RadioButtonGroup, TextArea } from './components';
 import useInput from './hooks/useInput';
+import { Zoom, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import successCheck from './assets/images/icon-success-check.svg';
 
 const App: React.FC = () => {
   const firstNameInput = useInput('');
   const lastNameInput = useInput('');
   const emailInput = useInput('');
 
+  const renderedMessage = () => {
+    return (
+      <div className='success__msg'>
+        <div className='success__msg-header'>
+          <img src={successCheck} alt='' role='presentation' /> Message Sent!
+        </div>
+        <div className='success__msg-text'>
+          Thanks for completing the form. We'll be in touch soon!
+        </div>
+      </div>
+    );
+  };
+
+  const notify = () =>
+    toast(renderedMessage, {
+      position: 'top-center',
+      hideProgressBar: true,
+      autoClose: 3000,
+      closeOnClick: true,
+      closeButton: false,
+      transition: Zoom,
+    });
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     validateInput(firstNameInput);
     validateInput(lastNameInput);
     validateInput(emailInput);
+    notify();
   };
 
   const queryOptions = [
@@ -101,6 +128,7 @@ const App: React.FC = () => {
         <Button type='submit' className='btn btn-primary'>
           Submit
         </Button>
+        <ToastContainer />
       </form>
     </main>
   );

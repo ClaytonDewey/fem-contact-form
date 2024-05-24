@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+.success {
+  &__msg {
+    &-header {
+      display: flex;
+      margin-bottom: rem(16);
+      gap: rem(8);
+      align-items: center;
+      font-weight: 700;
+      font-size: var(--fs-med);
+      line-height: 150%;
+      letter-spacing: 0;
+    }
+    &-text {
+      font-size: var(--fs-reg);
+      line-height: 150%;
+      font-weight: normal;
+      color: var(--clr-light-green);
+    }
+  }
+}
+
+.Toastify {
+  &__toast {
+    background-color: var(--clr-dark-grey);
+    color: var(--clr-white);
+    border-radius: rem(12);
+    padding: rem(24);
+
+    &-container {
+      width: rem(450);
+      padding: 0;
+    }
+  }
+}
