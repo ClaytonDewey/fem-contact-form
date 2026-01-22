@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: rem(2) solid transparent;
+  background-color: transparent;
+  padding-inline: rem(15);
+  height: rem(59);
+  border-radius: rem(8);
+  font: var(--body-bold);
+
+  &-primary {
+    background-color: hsl(var(--clr-green-600));
+    border-color: hsl(var(--clr-green-600));
+    color: hsl(var(--clr-white));
+    width: 100%;
+  }
+}

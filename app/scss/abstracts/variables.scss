@@ -1,0 +1,20 @@
+@use '../util' as *;
+
+:root {
+  //Colors
+  --clr-grey-900: 187 24 22;
+  --clr-grey-500: 186 15 59;
+  --clr-white: 0 0 100;
+  --clr-green-600: 169 82 27;
+  --clr-green-200: 148 38 91;
+  --clr-red: 0 66 54;
+
+  // Font Family
+  --ff-primary: 'Karla', sans-serif;
+
+  // Font styles
+  --heading: normal normal 700 #{rem(32)} / 100% var(--ff-primary);
+  --body-bold: normal normal 700 #{rem(18)} / 150% var(--ff-primary);
+  --body: normal normal 400 #{rem(18)} / 150% var(--ff-primary);
+  --body-sm: normal normal 400 #{rem(16)} / 150% var(--ff-primary);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <form class="form">
+      <div class="form-group">
+        <label for="firstName">First Name <span>*</span></label>
+        <input type="text" name="firstName" id="firstName" class="form-control" required>
+        <p class="error">This field is required</p>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name <span>*</span></label>
+        <input type="text" name="lastName" id="lastName" class="form-control" required>
+        <p class="error">This field is required</p>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" name="email" id="email" class="form-control" required>
+        <p class="error">Please enter a valid email address</p>
+        <p class="error">This field is required</p>
+      </div>
+
+      <div class="form-check">
+        <legend>Query Type <span>*</span></legend>
+        <fieldset>
+          <input type="radio" name="query" id="general" class="form-check-input" required>
+          <label for="general">General Enquiry</label>
+
+          <input type="radio" name="query" id="support" class="form-check-input" required>
+          <label for="support">Support Request</label>
+          <p class="error">Please select a query type</p>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span>*</span></label>
+        <textarea name="message" id="message" class="form-control" required></textarea>
+        <p class="error">This field is required</p>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" name="consent" id="consent" class="form-check-input" required>
+        <label for="consent">I consent to being contacted by the team</label>
+        <p class="error">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    Message Sent!
+    Thanks for completing the form. We'll be in touch soon!
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>

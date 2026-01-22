@@ -1,0 +1,45 @@
+@use '../util' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background-color: hsl(var(--clr-green-200));
+  color: hsl(var(--clr-grey-900));
+  font: var(--body);
+}
+
+h1 {
+  font: var(--heading);
+  margin: 0;
+  margin-block-end: rem(32);
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: rem(1);
+  width: rem(1);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
