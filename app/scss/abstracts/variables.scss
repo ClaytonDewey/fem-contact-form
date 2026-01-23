@@ -17,4 +17,12 @@
   --body-bold: normal normal 700 #{rem(18)} / 150% var(--ff-primary);
   --body: normal normal 400 #{rem(18)} / 150% var(--ff-primary);
   --body-sm: normal normal 400 #{rem(16)} / 150% var(--ff-primary);
+
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --transtion: none;
+  }
 }
