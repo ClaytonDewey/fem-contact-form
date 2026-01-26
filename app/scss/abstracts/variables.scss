@@ -25,4 +25,8 @@
   @media (prefers-reduced-motion: reduce) {
     --transtion: none;
   }
+
+  // Flexbox gap/columns
+  --gap: #{rem(16)};
+  --columns: 2;
 }

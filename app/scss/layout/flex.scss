@@ -1,0 +1,18 @@
+@use '../util' as *;
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  @include breakpoint(tablet) {
+    flex-wrap: nowrap;
+    &__item {
+      --columns: 2;
+      flex: 0 1
+        calc(
+          (100% / var(--columns)) - var(--gap) + (var(--gap) / var(--columns))
+        );
+    }
+  }
+}

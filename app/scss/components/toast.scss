@@ -8,6 +8,8 @@
   top: -100%;
   left: rem(24);
   right: rem(24);
+  max-width: rem(450);
+  margin-inline: auto;
   background: hsl(var(--clr-grey-900));
   color: hsl(var(--clr-green-200));
   padding: rem(24);

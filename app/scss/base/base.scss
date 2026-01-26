@@ -12,10 +12,10 @@ html {
   font-style: normal;
   font-weight: normal;
   box-sizing: border-box;
+  font-family: var(--ff-primary);
 }
 
 body {
-  font-family: var(--ff-primary);
   background-color: hsl(var(--clr-green-200));
   color: hsl(var(--clr-grey-900));
   font: var(--body);
