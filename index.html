@@ -37,7 +37,8 @@
 
       <div class="input-group">
         <label for="email" class="input-group__label">Email Address <span>*</span></label>
-        <input type="email" name="email" id="email" class="input-group__input" required>
+        <input type="email" name="email" id="email" class="input-group__input"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address" required>
         <span class="input-group__error">Please enter a valid email address</span>
         <span class="input-group__error">This field is required</span>
       </div>
