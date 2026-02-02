@@ -65,6 +65,7 @@ textarea {
 
 .radio__wrapper {
   margin-bottom: rem(24);
+  position: relative;
 
   &-item {
     width: 100%;
@@ -94,7 +95,7 @@ textarea {
       &::after {
         content: '';
         position: absolute;
-        display: none;
+        visibility: hidden;
         top: 2px;
         left: 2px;
         width: 12px;
@@ -106,12 +107,20 @@ textarea {
   }
 
   input {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    height: rem(1);
+    width: rem(1);
 
-    &:checked + label {
+    &:focus + label,
+    &:hover + label {
       background-color: hsl(var(--clr-green-200));
       border-color: hsl(var(--clr-green-600));
+      transition: var(--transition);
+    }
 
+    &:checked + label {
       .checkmark {
         border: none;
         background-image: url(../../../img/icon-radio-selected.svg);
